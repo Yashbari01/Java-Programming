@@ -18,8 +18,16 @@ public class Datatypes {
         short s1=32767;
         System.out.println(s1);
 
+//        long DataType value range lies between -9223372036854775808 to 9223372036854775807 (32-bit).
+        long L1= 922337202;
+        System.out.println(L1);
+
 //        float DataType is a single-precision 32-bit IEEE 754 floating point. Its value range is unlimited.
         float f1= 10.1f;
         System.out.println(f1);
+
+//        Double DataType is a double-precision 64-bit IEEE 754 floating point. Its value range is unlimited.
+        double D1= 987887670;
+        System.out.println(D1);
     }
 }
