@@ -1,0 +1,67 @@
+Basic Java Interview Questions and Answers
+==========================================
+
+1. What is a variable in Java?
+   ---------------------------
+   A variable in Java is a container that holds data values during the execution of a program. It is a name given to a memory location.
+
+2. What are the types of variables in Java?
+   ----------------------------------------
+   There are three types of variables in Java:
+   - Local Variables: Declared inside a method and accessible only within that method.
+   - Instance Variables: Declared inside a class but outside any method and are accessible from all methods in the class.
+   - Class Variables (Static Variables): Declared with the static keyword and shared among all instances of the class.
+
+3. What are primitive data types in Java?
+   --------------------------------------
+   Java has 8 primitive data types:
+   - byte: 8-bit integer
+   - short: 16-bit integer
+   - int: 32-bit integer
+   - long: 64-bit integer
+   - float: Single-precision 32-bit floating point
+   - double: Double-precision 64-bit floating point
+   - char: 16-bit Unicode character
+   - boolean: Represents true or false
+
+4. What is a literal in Java?
+   --------------------------
+   A literal is a fixed value that is represented directly in the code. Examples include numbers (e.g., 10), characters (e.g., 'A'), and strings (e.g., "Hello").
+
+5. Explain the arithmetic operators in Java.
+   -----------------------------------------
+   Arithmetic operators are used for mathematical operations. They include:
+   - Addition (+): Adds two values.
+   - Subtraction (-): Subtracts one value from another.
+   - Multiplication (*): Multiplies two values.
+   - Division (/): Divides one value by another.
+   - Modulus (%): Returns the remainder of a division operation.
+
+6. What is the difference between `==` and `equals()` in Java?
+   -----------------------------------------------------------
+   - `==` checks if two references point to the same memory location (reference comparison).
+   - `equals()` method checks if two objects are logically equal (value comparison).
+
+7. How do you declare a constant in Java?
+   --------------------------------------
+   A constant is declared using the `final` keyword. Once assigned, its value cannot be changed.
+   Example: `final int MAX_VALUE = 100;`
+
+8. What is type casting in Java?
+   -----------------------------
+   Type casting is converting one data type into another. It can be implicit (automatic) or explicit (manual).
+   Example of explicit casting: `double num = 10.5; int intNum = (int) num;`
+
+9. What is the default value of an instance variable?
+   --------------------------------------------------
+   The default values for instance variables are:
+   - int: 0
+   - double: 0.0
+   - char: '\u0000' (null character)
+   - boolean: false
+   - Objects (including String): null
+
+10. What is the difference between `break` and `continue`?
+    ------------------------------------------------------
+    - `break` terminates the loop immediately and passes control to the next statement after the loop.
+    - `continue` skips the current iteration of the loop and proceeds to the next iteration.

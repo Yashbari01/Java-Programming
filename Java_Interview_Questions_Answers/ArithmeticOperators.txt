@@ -1,0 +1,49 @@
+Arithmetic Operators in Java
+============================
+
+Definition:
+-----------
+Arithmetic operators are used to perform basic mathematical operations.
+
+List of Arithmetic Operators:
+-----------------------------
+1. Addition (+)
+    Example:
+    int sum = 10 + 5; // sum is 15
+
+2. Subtraction (-)
+    Example:
+    int difference = 10 - 5; // difference is 5
+
+3. Multiplication (*)
+    Example:
+    int product = 10 * 5; // product is 50
+
+4. Division (/)
+    Example:
+    int quotient = 10 / 5; // quotient is 2
+
+5. Modulus (%)
+    Example:
+    int remainder = 10 % 3; // remainder is 1
+
+Examples:
+---------
+public class ArithmeticExample {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 5;
+
+        int sum = a + b;
+        int difference = a - b;
+        int product = a * b;
+        int quotient = a / b;
+        int remainder = a % b;
+
+        System.out.println("Sum: " + sum); // 15
+        System.out.println("Difference: " + difference); // 5
+        System.out.println("Product: " + product); // 50
+        System.out.println("Quotient: " + quotient); // 2
+        System.out.println("Remainder: " + remainder); // 1
+    }
+}

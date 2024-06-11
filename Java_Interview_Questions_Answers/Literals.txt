@@ -1,0 +1,35 @@
+Literals in Java
+================
+
+Definition:
+-----------
+Literals are fixed values that are directly represented in the code.
+
+Types of Literals:
+------------------
+1. Integer Literals: Numeric values without a decimal point.
+    Example: 10, -20, 0
+
+2. Floating-point Literals: Numeric values with a decimal point.
+    Example: 3.14, -0.001
+
+3. Character Literals: Single characters enclosed in single quotes.
+    Example: 'a', '1', '$'
+
+4. String Literals: Sequences of characters enclosed in double quotes.
+    Example: "Hello", "Java"
+
+5. Boolean Literals: Represent true or false values.
+    Example: true, false
+
+6. Null Literals: Represent a null reference.
+    Example: null
+
+Examples:
+---------
+int count = 100; // Integer literal
+double pi = 3.14159; // Floating-point literal
+char grade = 'A'; // Character literal
+String greeting = "Hello World"; // String literal
+boolean isValid = true; // Boolean literal
+String nullString = null; // Null literal

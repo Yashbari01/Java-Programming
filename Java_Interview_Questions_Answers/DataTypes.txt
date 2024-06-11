@@ -1,0 +1,36 @@
+Data Types in Java
+==================
+
+Definition:
+-----------
+Data types specify the different sizes and values that can be stored in a variable.
+
+Primitive Data Types:
+---------------------
+1. byte - 8-bit integer
+2. short - 16-bit integer
+3. int - 32-bit integer
+4. long - 64-bit integer
+5. float - Single-precision 32-bit floating point
+6. double - Double-precision 64-bit floating point
+7. char - 16-bit Unicode character
+8. boolean - Represents true or false values
+
+Example:
+---------
+int age = 30; // Integer data type
+double salary = 75000.50; // Double data type
+char grade = 'A'; // Character data type
+boolean isEmployee = true; // Boolean data type
+
+Non-Primitive Data Types:
+-------------------------
+1. String - Sequence of characters
+2. Arrays - A collection of data of the same type
+3. Classes - Custom data types
+4. Interfaces - Abstract types used to specify behavior
+
+Example:
+---------
+String name = "John Doe"; // String data type
+int[] numbers = {1, 2, 3, 4, 5}; // Array data type

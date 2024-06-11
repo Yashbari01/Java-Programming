@@ -1,0 +1,33 @@
+Variables in Java
+=================
+
+Definition:
+-----------
+Variables are containers for storing data values. Each variable must be declared with a type, which determines what kind of values it can hold.
+
+Declaration and Initialization:
+-------------------------------
+Syntax:
+    type variableName = value;
+
+Examples:
+    int age = 25;
+    double salary = 50000.50;
+    String name = "Alice";
+
+Types of Variables:
+-------------------
+1. Local Variables: Declared inside a method or a block and only accessible within that method or block.
+2. Instance Variables: Declared inside a class but outside any method, and they are accessible by all methods of the class.
+3. Class Variables (Static Variables): Declared with the static keyword, they belong to the class rather than instances of the class.
+
+Example:
+---------
+public class Example {
+    int instanceVar; // Instance variable
+    static int classVar; // Class variable
+
+    public void method() {
+        int localVar = 10; // Local variable
+    }
+}
