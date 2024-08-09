@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -13,43 +15,39 @@ class Registration {
 
     private static final String EMAIL_PATTERN = "^[\\w-\\.]+@[\\w-]+\\.[a-zA-Z]{2,}$";
 
+    private static final Map<String, String> userCredentials = new HashMap<>();
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         try {
             System.out.println("Registration Form");
-
-            // Username validation
+            
+            // Registration logic
             String userName = getValidInput("Enter username (at least 3 characters):", 
                                             USERNAME_ERROR, 
                                             input -> input.length() >= 3);
 
-            // Name validation
             String name = getValidInput("Enter Name (alphabetic characters only):", 
                                          NAME_ERROR, 
                                          input -> input.matches("[a-zA-Z]+"));
 
-            // Surname validation
             String surname = getValidInput("Enter Surname (alphabetic characters only):", 
                                             SURNAME_ERROR, 
                                             input -> input.matches("[a-zA-Z]+"));
 
-            // Gender selection
             String gender = getValidInput("Enter Gender (Male/Female):", 
                                            GENDER_ERROR, 
                                            input -> input.equalsIgnoreCase("Male") || input.equalsIgnoreCase("Female"));
 
-            // Phone number validation
             String phoneNumber = getValidInput("Enter Phone Number (10 digits):", 
                                                 PHONE_ERROR, 
                                                 input -> input.matches("\\d{10}"));
 
-            // Email ID validation
             String emailID = getValidInput("Enter EmailID (example@example.com):", 
                                             EMAIL_ERROR, 
                                             input -> Pattern.matches(EMAIL_PATTERN, input));
 
-            // Password validation and confirmation
             String password = getValidInput("Enter Password (at least 6 characters, including uppercase, lowercase, digits, and special characters):", 
                                              PASSWORD_ERROR, 
                                              Registration::isValidPassword);
@@ -57,6 +55,9 @@ class Registration {
             String confirmPassword = getValidInput("Confirm Password:", 
                                                     CONFIRM_PASSWORD_ERROR, 
                                                     input -> input.equals(password));
+
+            // Store the user credentials
+            userCredentials.put(userName, password);
 
             // Displaying the validated information
             System.out.println("Registration Successful");
@@ -66,8 +67,21 @@ class Registration {
             System.out.println("Gender: " + gender);
             System.out.println("Phone Number: " + phoneNumber);
             System.out.println("EmailID: " + emailID);
-            // Avoid displaying the password in a real application
             System.out.println("Password has been set successfully.");
+
+            // Login logic
+            System.out.println("Login Form");
+
+            String loginUserName = getValidInput("Enter username for login:", 
+                                                 "Username does not exist.", 
+                                                 input -> userCredentials.containsKey(input));
+            
+            String loginPassword = getValidInput("Enter password for login:", 
+                                                 "Incorrect password.", 
+                                                 input -> userCredentials.get(loginUserName).equals(input));
+
+            System.out.println("Login Successful");
+
         } finally {
             scanner.close(); // Ensure the scanner is closed to avoid resource leaks
         }
